@@ -99,9 +99,6 @@ type Store interface {
 
 	// Close the store connection
 	Close()
-
-	// <-chan connection state, disconnected or other
-	WaitingConnCloseState(waiting chan<- struct{}, stop <-chan struct{})
 }
 
 // KVPair represents {Key, Value, Lastindex} tuple
